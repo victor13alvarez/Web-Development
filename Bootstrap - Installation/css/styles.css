@@ -67,9 +67,10 @@ p {
 }
 
 .title_iphone-img {
-  width: 30vw;
+  width: 20vw;
+  max-height: 100%;
   position: absolute;
-  right: 10vw;
+  right: 15vw;
 }
 
 /* Download Buttons */
@@ -148,13 +149,13 @@ p {
 
 /* Media Queries */
 @media (max-width: 990px) {
-  #title {
+  #title .container-fluid {
     text-align: center;
   }
 
   .title_iphone-img {
     position: static;
     transform: rotate(0);
-    max-width: 100%;
+    display: none;
   }
 }
