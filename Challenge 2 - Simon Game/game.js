@@ -67,7 +67,6 @@ function playSimonButtonSound(audioName) {
 }
 
 async function displaySimonSequence() {
-  playerIsPlaying = false;
   //For each element in simon sequence with inner delay
   for (var i = 0; i < simonSequence.length; i++) {
     var actualColor = simonSequence[i];
@@ -75,6 +74,8 @@ async function displaySimonSequence() {
     playSimonButtonSound(actualColor);
     await timer(500);
   }
+
+  //Setup ready - Player Turn
   playerIsPlaying = true;
 
 }
@@ -88,17 +89,22 @@ function handleAnswer(colorPressed) {
     //Animate and Play Button pressed
     animateSimonButton(colorPressed);
     playSimonButtonSound(colorPressed);
+
     if (playerAnswers.length === simonSequence.length) {
+      //Player no longer is playing
+      playerIsPlaying = false;
+
+      //SetUp new round
       setTimeout(() => {
         mainGameFlow();
-      }, "1000")
-
+      }, "1000");
     }
   }
   //Manage wrong answer
   else {
     handleEndGame();
   }
+
 }
 
 function handleEndGame() {
