@@ -8,14 +8,22 @@
 
 <body>
   <h1>My Weather App!</h1>
-
-  <form class="" action="/" method="post">
+  <form class="" action="/getWeatherByCoordinates" name="coordinatesInputForm" method="post">
     <!-- Action -> The Root Server -->
-    <input type="number" step="0.01" name="Latitude" value="" placeholder="Latitude">
-    <input type="number" step="0.01" name="Longitude" value="" placeholder="Longitude">
+    <p>
+      Check weather by geographical values!
+    </p>
+    <input type="number" step="0.01" name="latitude" value="" placeholder="Latitude">
+    <input type="number" step="0.01" name="longitude" value="" placeholder="Longitude">
     <button type="submit" name="button">Ask for data!</button>
   </form>
-
+  <form class="" action="/getWeatherByName" method="post">
+    <p>
+      Check weather by city name!
+    </p>
+    <input type="text" name="cityName" placeholder="Valencia">
+    <button type="submit" name="button">Ask for data!</button>
+  </form>
 </body>
 
 </html>
