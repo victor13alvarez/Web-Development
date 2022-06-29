@@ -1,0 +1,33 @@
+<%- include('header') -%>
+
+<body>
+  <div class="box" id="heading">
+    <h1><%= date %></h1>
+  </div>
+
+  <div class="box">
+    <% tasksList.forEach((item, i) => {%>
+    <div class="item">
+      <div class="listItem">
+        <input type="checkbox" name="" value="">
+        <p><%=item%></p>
+      </div>
+      <form class="item" action="deleteItems" method="post">
+        <button type="submit" name="button" value="<%=i%>">-</button>
+      </form>
+    </div>
+    <%}); %>
+
+    <form class="item" action="createNewItem" method="post">
+      <label for="newTask"></label>
+      <input type="text" name="newTask" placeholder="New Task" autofocus autocomplete="off">
+      <button type="submit" name="button">+</button>
+    </form>
+  </div>
+
+  <!-- <form class="" action="deleteItems" method="post">
+
+  </form> -->
+</body>
+
+<%- include('footer') -%>
