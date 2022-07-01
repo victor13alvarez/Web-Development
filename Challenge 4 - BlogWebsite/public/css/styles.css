@@ -1,0 +1,54 @@
+body {
+  font-size: 1.25rem;
+}
+
+.navbar {
+  padding: 15px 0;
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  padding: 15px 0;
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+
+.navbar-nav li a:hover {
+  color: #1abc9c;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  text-align: justify;
+}
+
+.post_link {
+  color: #1abc9c
+}
+
+.post_link:hover {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1abc9c
+}
+
+.post_content {
+  width: auto;
+  max-width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 990px) {
+  body {
+    font-size: 24px;
+  }
+}

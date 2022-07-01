@@ -1,0 +1,13 @@
+<%- include("./partials/header");%>
+
+<h1>HOME</h1>
+<p><%= homeStartingContent%></p>
+<% posts.forEach((item, i) => {%>
+    <h1><a href="/posts/<%=item.title.replace(" ","-")%>"><%=item.title%></a></h1>
+    <div class="d-flex ">
+      <p class="me-5 post_content"><%=item.content%></p>
+      <a class="post_link" href="/posts/<%=item.title%>">Read more...</a>
+    </div>
+<%});%>
+
+<%- include("./partials/footer");%>
